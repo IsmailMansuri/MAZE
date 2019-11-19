@@ -76,17 +76,25 @@ void loop() {
   Serial.println(left_dis);
   
   
- if (right_dis <= 6&& left_dis <= 6&& front_dis>5){
-   forward();
+  if (right_dis <= 9&& left_dis <= 9&& front_dis<8){
+   back;
+   delay(4000)
+   Serial.println("back");
  }
   
-  else if(right_dis > 6&&left_dis <= 6&& front_dis>5){
+  else if (right_dis <= 9&& left_dis <= 9&& front_dis>8){
+   forward();
+   Serial.println("forward");
+ }
+  
+  else if(right_dis > 9&&left_dis <= 9&& front_dis>7){
     right();
-    delay(100);
+    Serial.println("right");
   }
 
-  else if (left_dis >6&&right_dis <= 6&& front_dis>5){
+  else if (left_dis >9&&right_dis <= 9&& front_dis>7){
     left();
+    Serial.println("left");
   }
 
 
@@ -97,6 +105,7 @@ void right() {
   digitalWrite(in2, LOW);
   digitalWrite(in3, HIGH);
   digitalWrite(in4, LOW);
+  
 }
 void Stop () {
  
