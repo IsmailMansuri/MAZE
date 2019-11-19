@@ -75,6 +75,7 @@ void loop() {
   Serial.print(":");
   Serial.println(left_dis);
   
+  delay(1500);
   
   if (right_dis <= 9&& left_dis <= 9&& front_dis<8){
    back;
